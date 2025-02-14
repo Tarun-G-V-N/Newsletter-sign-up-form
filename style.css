@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+body{
+    background-color: hsl(235, 18%, 26%);
+    font-family: "Roboto", serif;
+}
+
+.signUpStyle{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: white;
+    height: 700px;
+    width: 380px;
+    margin: auto;
+}
+
+.signUpStyle #signUpImage{
+    width: 100%;
+}
+
+.signUpStyle h1{
+    margin-left: 20px;
+    margin-bottom: 10px;
+    /* border: 2px solid blue; */
+}
+
+.signUpStyle p{
+    margin: 10px 10px 10px 20px;
+}
+
+.signUpStyle ul{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    list-style: none;
+}
+
+.signUpStyle li{
+    padding: 5px;
+    margin-right: 20px;
+    display: flex;
+    position: relative;
+}
+
+.signUpStyle li::before{
+    content: "";
+    display: inline-block;
+    background-image: url(assets/images/icon-list.svg);
+    background-size: contain; /*ensures that the background image is scaled to fit entirely within the element, without being cropped or stretched. It maintains the image's aspect ratio while resizing it to fit within the element’s dimensions.*/
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    right: 325px;
+    top: 7px;
+    
+}
+
+.signUpStyle label{
+    margin-left: 20px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.errorStyle::after{
+    content: "valid email required";
+    width: 150px;
+    font-size: smaller;
+    position: absolute;
+    left: 210px;
+    bottom: 0px;
+    color: hsl(4, 100%, 67%);
+}
+
+.signUpStyle input{
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    padding: 15px;
+    width: 300px;
+    border-radius: 5px;
+    border: 1px solid hsl(231, 7%, 60%);
+    cursor: pointer;
+}
+
+.errorEmailBox{
+    background-color: hsl(5, 94%, 87%);
+}
+
+.errorEmailBox::placeholder{
+    color: hsl(4, 100%, 67%);
+}
+
+.signUpStyle button{
+    margin-left: 20px;
+    margin-top: 10px;
+    padding: 15px;
+    width: 330px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background-color: hsl(234, 29%, 20%);
+    cursor: pointer;
+}
+
+.signUpStyle button:hover {
+  background: linear-gradient(to right, hsl(345, 76%, 62%), hsl(4, 100%, 67%));
+  box-shadow: 8px 20px 13px 3px hsla(4, 100%, 67%, 0.14), -8px 20px 13px 3px hsla(4, 100%, 67%, 0.14);
+  outline: none;
+}
+
+.successStyle button:hover {
+    background: linear-gradient(to right, hsl(345, 76%, 62%), hsl(4, 100%, 67%));
+    box-shadow: 8px 20px 13px 3px hsla(4, 100%, 67%, 0.14), -8px 20px 13px 3px hsla(4, 100%, 67%, 0.14);
+    outline: none;
+  }
+
+.successStyle{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: white;
+    height: 500px;
+    width: 380px;
+    margin: auto;
+}
+
+.successStyle img{
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.successStyle h1{
+    margin: 20px 20px 20px 20px;
+}
+
+.successStyle p{
+    margin: 10px 10px 10px 20px;
+}
+
+.successStyle button{
+    margin-left: 20px;
+    margin-top: 10px;
+    padding: 15px;
+    width: 330px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background-color: hsl(234, 29%, 20%);
+    cursor: pointer; 
+}
+
+.hidden{
+    display: none;
+}
+
+@media (min-width: 60em) {
+    
+    .signUpStyle{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        background-color: white;
+        height: 600px;
+        width: 850px;
+        margin: 50px auto;
+        border-radius: 20px;
+    }
+
+    .signUpStyle div{
+        margin-left: 20px;
+    }
+
+    .signUpStyle h1{
+        margin-top: 0px;
+        margin-bottom: 20px;
+        font-size: 55px;
+    }
+
+    .signUpStyle #signUpImage{
+        content: url(assets/images/illustration-sign-up-desktop.svg);
+        height: 560px;
+        margin-right: 0px;
+        padding-right: 0px;
+    }
+
+    .signUpStyle li{
+        position: relative;
+    }
+    
+    .signUpStyle li::before{
+        position: absolute;
+        right: 355px;
+        top: 7px;
+    }
+
+    .successStyle{
+        justify-content: center;
+        border-radius: 20px;
+        height: 400px;
+        width: 420px;
+        margin: 70px auto;
+    }
+
+    .successStyle p{
+        margin: 20px 20px 20px 30px;
+    }
+
+    .successStyle button{
+        margin-left: 30px;
+    }
+
+    .successStyle img{
+        margin-left: 30px;
+    }
+    
+    .successStyle h1{
+        margin: 20px 20px 20px 30px;
+    }
+
+    .hidden{
+        display: none;
+    }
+}
